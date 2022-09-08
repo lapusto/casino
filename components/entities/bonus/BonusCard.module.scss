@@ -1,0 +1,22 @@
+@import "../../../styles/variables.scss";
+
+.bonus-card{
+    display: inline-flex;
+    flex-direction: column;
+    width: 242px;
+    height: 337px;
+    border-radius: 6px;
+    background-color: #0C2B48;
+
+    .casino-logo {
+          height: 100px;    
+    }
+
+    .bonus-details {
+        border: 2px dashed #1D8EFA;
+        height: 237px;
+        background-color: $white;
+        border-bottom-right-radius:80px;
+    }
+   
+}

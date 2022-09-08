@@ -1,7 +1,14 @@
-import '../styles/globals.css'
+import Header from "../components/core/header/Header";
+import BonusCard from "../components/entities/bonus/BonusCard";
+import Slider from "../components/core/slider/Slider";
+import "../styles/globals.css";
+import 'bootstrap/dist/css/bootstrap.min.css';
+const MyApp = ({ Component, pageProps }) => (
+  <>
+    <Component {...pageProps} />
+    <Header />
+    <Slider />
+  </>
+);
 
-function MyApp({ Component, pageProps }) {
-  return <Component {...pageProps} />
-}
-
-export default MyApp
+export default MyApp;

@@ -1,0 +1,26 @@
+@import "../../../styles/variables.scss";
+
+
+.my-swiper {
+
+  
+    
+  :global {
+    .swiper-button-next,
+    .swiper-button-prev {
+     border: 2px solid pink;
+    }
+
+    .swiper-pagination-bullet {
+      width: 40px;
+      height: 12px;
+      border: 1px solid;
+      border-radius: 8px;
+      background-color: white;
+    }
+    .swiper-pagination-bullet-active {
+      border: none;
+      background: linear-gradient($blueGradient);
+    }
+  }
+}
