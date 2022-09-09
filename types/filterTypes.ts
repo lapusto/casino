@@ -1,7 +1,7 @@
-import { bonusCategory } from "./bonusTypes";
+import { BonusCategory } from "./bonusTypes";
 
 export interface FilterProps {
-  categories: bonusCategory[],
-  toFilter: any,
-  active: bonusCategory
+  categories: BonusCategory[],
+  toFilter: (str: BonusCategory) => void,
+  active: BonusCategory
 }  

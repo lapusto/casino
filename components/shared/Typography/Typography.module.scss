@@ -1,15 +1,25 @@
+@import "../../../styles/variables.scss";
+
 .typography {
-   
+  &.s {
+    font-size: 20px;
+    line-height: 28.5px;
+  }
 
-    &.s{
-        font-size: 20px;
-        line-height: 28.5px;
-    }
+  &.m {
+    font-size: 21px;
+  }
 
-    &.m {
-        font-size: 21px;
-        
-    }
+  &.l {
+    font-weight: 700;
+    font-size: 42px;
+  }
 
+  &.ltr {
+    transform: translateX(calc($math-var * -40px));
+  }
 
+  &.rtl {
+    transform: translateX(calc($math-var * 40px));
+  }
 }

@@ -5,5 +5,5 @@ export interface ButtonProps extends DetailedHTMLProps<ButtonHTMLAttributes<HTML
     size: 's' | 'm'  | 'l';
     isActive?: boolean;
     filled?: boolean;
-    onClick?: any
+    onClick?: () => void
 }

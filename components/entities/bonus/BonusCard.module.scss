@@ -1,22 +1,102 @@
 @import "../../../styles/variables.scss";
 
-.bonus-card{
-    display: inline-flex;
-    flex-direction: column;
-    width: 242px;
-    height: 337px;
-    border-radius: 6px;
-    background-color: #0C2B48;
+.bonus-card {
+  display: inline-flex;
+  flex-direction: column;
+  width: 242px;
+  height: 337px;
+  border-radius: 6px;
+  background-color: #0c2b48;
+  font-family: "Roboto", sans-serif;
+  font-weight: 600;
+  text-align: center;
 
-    .casino-logo {
-          height: 100px;    
+  .casino-logo {
+    height: 100px;
+  }
+
+  .bonus-details {
+    border: 2px dashed #1d8efa;
+    height: 237px;
+    background-color: $white;
+    border-bottom-right-radius: 80px;
+
+    .bonus-header {
+        display: flex;
+        position: relative;
     }
 
-    .bonus-details {
-        border: 2px dashed #1D8EFA;
-        height: 237px;
-        background-color: $white;
-        border-bottom-right-radius:80px;
+    .exclusive {
+        position: absolute;
+      text-align: left;
+      width: 100%;
+      top: -15px;
+      left: -13px;
     }
-   
+
+    .bonus-type {
+      color: $blue;
+      text-transform: uppercase;
+      margin-top: 15px;
+      margin-left: 28px;
+      white-space: nowrap;
+    }
+
+    .divider {
+      color: $blue;
+      width: 70px;
+      border: 1px solid $blue;
+      margin-left: 85px;
+      margin-top: -14px;
+    }
+
+    .up-to {
+      font-weight: 400;
+      font-size: 16px;
+      line-height: 12.8px;
+      text-align: right;
+      margin-right: 40px;
+      margin-top: -3px;
+    }
+    .amount {
+      font-weight: 600;
+      font-size: 54px;
+      line-height: 48px;
+      color: $bonusAmountDarkBlue;
+      margin-top: -15px;
+    }
+
+    .free-spins {
+      color: $bonusAmountDarkBlue;
+      font-size: 21px;
+      line-height: 25px;
+      margin-top: -15px;
+    }
+    .spins-on {
+      font-weight: 400;
+      font-size: 16px;
+      line-height: 15px;
+      color: $blue;
+      margin-top: -15px;
+    }
+
+    .play-btn {
+      position: relative;
+      top: -10px;
+      margin-left: 10px;
+    }
+    .flag-img {
+      display: inline;
+      position: relative;
+      bottom: 3px;
+      left: 7px;
+    }
+
+    .tooltip-container {
+      position: relative;
+      text-align: end;
+      bottom: 3px;
+      left: -2px;
+    }
+  }
 }

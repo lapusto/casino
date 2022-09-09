@@ -1,7 +1,6 @@
 import { Bonus } from '../../../types/bonusTypes';
 import {ripper, ozwin, hellspin, fair, bizzo} from "../../images/images.js"
 
-
 export  const bonuses: Bonus[] = [
     {
         logo: ripper,
@@ -19,13 +18,13 @@ export  const bonuses: Bonus[] = [
 
     },
     {
-        logo: hellspin,
+        logo: fair,
         casino: "Fair Go Casino",
         bonusType: "No Deposit Bonus",
         amount: "8,888"
     },
     {
-        logo: fair,
+        logo: hellspin,
         casino: "Hell Spin Casino",
         bonusType: "No Deposit Bonus",
         amount: "4,400"
@@ -70,6 +69,18 @@ export  const bonuses: Bonus[] = [
         bonusType: "Welcome Bonus",
         amount: "4,200",
         exclusive: true
+    },
+    {
+        logo: bizzo,
+        casino: "Bizzo Casino",
+        bonusType: "Free Spins Bonus",
+        amount: "9,250"
+    },
+    {
+        logo: ozwin,
+        casino: "Ozwin Casino",
+        bonusType: "Free Spins Bonus",
+        amount: "7,225"
     },
     {
         logo: ripper,

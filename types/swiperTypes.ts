@@ -1,8 +1,7 @@
-import { Bonus, bonusCategory } from "./bonusTypes";
+import { Bonus, BonusCategory } from "./bonusTypes";
 
 export interface SwiperProps {
-
- bonusCardsToShow: Bonus[],
-  toFilter?: any,
-  active?: bonusCategory
+  bonusCardsToShow: Bonus[],
+  toFilter: () => void,
+  active: BonusCategory
 }  

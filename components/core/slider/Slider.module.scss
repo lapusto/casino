@@ -1,5 +1,15 @@
 .slider-wrapper {
- overflow:visible;
+  position: relative;
 
- 
+  .bonus-cards-wrapper {
+    & > * {
+      margin: 0 20px 20px 0;
+    }
+  }
+
+  .showAllButton {
+    text-align: center;
+    margin-top: 80px;
+    margin-bottom: 80px;
+  }
 }

@@ -1,17 +1,14 @@
 @import "../../../styles/variables.scss";
 
-
 .my-swiper {
-
-  
-    
   :global {
     .swiper-button-next,
     .swiper-button-prev {
-     border: 2px solid pink;
+      color: black;
     }
 
     .swiper-pagination-bullet {
+      z-index: 100;
       width: 40px;
       height: 12px;
       border: 1px solid;

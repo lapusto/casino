@@ -3,44 +3,28 @@ import styles from "./Slider.module.scss"
 import { bonuses } from "./mockData"
 import Filter from "../../entities/filter/Filter"
 import { useState } from "react"
-import { bonusCategory } from "../../../types/bonusTypes"
 import BonusCard from "../../entities/bonus/BonusCard"
-// Import Swiper React components
-import { Swiper, SwiperSlide } from 'swiper/react';
-import { Navigation } from "swiper";
-
-import 'swiper/css';
-import 'swiper/css/navigation';
-import 'swiper/css/pagination';
-
-
-import 'swiper/css';
-import 'swiper/css/navigation';
-import 'swiper/css/pagination';
-
-import Button from "../../shared/Button/Button"
+import Button from "../../shared/button/Button"
 import Typography from "../../shared/typography/Typography"
-
-import "swiper/css"
-import "swiper/css/navigation"
-import "swiper/css/thumbs"
 import BonusSwiper from "../../entities/swiper/BonusSwiper"
-import BSwiper from "../../entities/swiper/BonusSwiper"
 import { Container } from "react-bootstrap"
+import { BonusCategory } from "../../../types/bonusTypes"
+import 'swiper/css';
+import 'swiper/css/navigation';
+import 'swiper/css/pagination';
 
 const Slider = () => {
 
     const welcomeBonuses = bonuses.filter(item => item.bonusType === bonuses[0].bonusType)
-    const [filtered, setFiltered] = useState(welcomeBonuses)
 
+    const [filtered, setFiltered] = useState(welcomeBonuses)
     const [activeFilter, setActiveFilter] = useState(bonuses[0].bonusType)
-    
+    const [isShowAllButtonActive, setIsShowAllButtonActive] = useState(false)
 
     const bonusTypes = bonuses.map(b => b.bonusType)
     let [...uniqBonuses] = new Set(bonusTypes);
 
-
-    function toFilter(filterType: bonusCategory) {
+    function toFilter(filterType: BonusCategory) {
         const filteredBonusCards = bonuses.filter(item => item.bonusType === filterType)
         setActiveFilter(filterType)
         setFiltered(filteredBonusCards)
@@ -50,20 +34,18 @@ const Slider = () => {
         <Container fluid className={styles["slider-wrapper"]}>
             <Filter categories={uniqBonuses} toFilter={toFilter} active={activeFilter} />
             <Container className={styles["bonus-cards-wrapper"]}>
-            
-                 <BonusSwiper bonusCardsToShow={filtered}/> 
-            
+                {
+                    isShowAllButtonActive ? filtered.map((b, i) => <BonusCard bonus={b} key={`card-${i}`} className={styles["all-bonus-cards"]} />)
+                        : <BonusSwiper bonusCardsToShow={filtered} />
+                }
             </Container>
-            <Button size="l">
-                <Typography>Show All {activeFilter}</Typography>
-            </Button>
-            <div>
-   
-
-
-
-
-            </div>
+            <Container className={styles["showAllButton"]}>
+                <Button size="l" onClick={() => setIsShowAllButtonActive(!isShowAllButtonActive)}>
+                    <Typography>
+                        {!isShowAllButtonActive ? `Show All ${activeFilter}es` : 'Back'}
+                    </Typography>
+                </Button>
+            </Container>
         </Container>
 
     )

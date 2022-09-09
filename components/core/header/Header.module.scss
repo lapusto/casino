@@ -1,8 +1,6 @@
 @import "../../../styles/variables.scss";
 
 .header-wrapper {
-  // max-width: 1043px;
-  // height: 142px;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -10,11 +8,9 @@
   margin-bottom: 11px;
   font-family: "Lato", sans-serif;
 
-  h2 {
+  .title {
     color: $headerTitleIndigo;
-    font-weight: 700;
-    font-size: 42px;
-    margin-bottom: 3px;
+    margin-bottom: -5px;
   }
 
   p {

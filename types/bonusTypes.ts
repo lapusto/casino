@@ -1,17 +1,17 @@
 import { StaticImageData } from "next/image"
 
 
-export type bonusCategory = "No Deposit Bonus" | "Welcome Bonus" | "Free Spins Bonus"
+export type BonusCategory = "No Deposit Bonus" | "Welcome Bonus" | "Free Spins Bonus"
 
 export interface BonusCardProps {
-    bonus: Bonus
+    bonus: Bonus,
+    className?: String
 }
 
 export interface Bonus {
-    logo: StaticImageData | any,
+    logo: StaticImageData | string,
     casino: String,
-    bonusType: bonusCategory,
+    bonusType: BonusCategory,
     amount: String,
     exclusive?: Boolean
-
 }
