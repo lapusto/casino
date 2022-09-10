@@ -22,13 +22,16 @@ const Slider = () => {
     const [isShowAllButtonActive, setIsShowAllButtonActive] = useState(false)
 
     const bonusTypes = bonuses.map(b => b.bonusType)
-    let [...uniqBonuses] = new Set(bonusTypes);
+    const [...uniqBonuses] = new Set(bonusTypes);
+    
 
     function toFilter(filterType: BonusCategory) {
         const filteredBonusCards = bonuses.filter(item => item.bonusType === filterType)
         setActiveFilter(filterType)
         setFiltered(filteredBonusCards)
     }
+
+    const toggleShowAllButton = () => setIsShowAllButtonActive(!isShowAllButtonActive)
 
     return (
         <Container fluid className={styles["slider-wrapper"]}>
@@ -40,7 +43,7 @@ const Slider = () => {
                 }
             </Container>
             <Container className={styles["showAllButton"]}>
-                <Button size="l" onClick={() => setIsShowAllButtonActive(!isShowAllButtonActive)}>
+                <Button size="l" onClick={() => toggleShowAllButton()}>
                     <Typography>
                         {!isShowAllButtonActive ? `Show All ${activeFilter}es` : 'Back'}
                     </Typography>

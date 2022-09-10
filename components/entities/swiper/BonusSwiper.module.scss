@@ -11,8 +11,9 @@
       z-index: 100;
       width: 40px;
       height: 12px;
-      border: 1px solid #29557C;
-      border-radius: 8px;
+      border: 1px solid $darkBlue;
+      opacity: 1;
+      border-radius: 50px;
       background-color: white;
     }
     .swiper-pagination-bullet-active {
